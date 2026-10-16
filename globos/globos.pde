@@ -27,13 +27,13 @@ ArrayList<Globo> globos;
 
 void setup()
 {
-  size(640,480);
+  size(600,600);
   globos = new ArrayList<Globo>();  
 }
 
 void draw()
 {
-  background(20 100 250);
+  background(20,100,250);
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
