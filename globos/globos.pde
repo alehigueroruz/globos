@@ -1,12 +1,14 @@
 class Globo
 {
   float x, y,vx,vy;
+  color c;
   Globo (float _x, float _y)
   {
    x=_x;
    y=_y; 
    vx=random(-0.25,0.25);
    vy=random(-2,-0.5);
+   c=color(random(0,255),100,100);
   }
 
   void update()
@@ -17,12 +19,14 @@ class Globo
 
   void dibujate()
   {
+      fill(c);
       ellipse(x,y,100,100);
   }
   
 }
 
 ArrayList<Globo> globos;
+
 
 
 void setup()
@@ -33,6 +37,7 @@ void setup()
 
 void draw()
 {
+ 
   background(20,100,250);
   for(int i=0;i<globos.size();i++)
   {
