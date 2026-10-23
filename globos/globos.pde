@@ -6,8 +6,8 @@ class Globo
   {
    x=_x;
    y=_y; 
-   vx=random(-0.25,0.25);
-   vy=random(-2,-0.5);
+   vx=random(-0.5,0.5);
+   vy=random(-5,-0.5);
    c=color(random(0,255),random(0,255),random(0,255));
   }
 
@@ -21,11 +21,15 @@ class Globo
   {
       fill(c);
       ellipse(x,y,100,100);
+      imageMode(CENTER);
+      image(cara,x,y,100,100);
   }
   
 }
 
 ArrayList<Globo> globos;
+
+PImage cara;
 
 
 
@@ -39,6 +43,7 @@ void draw()
 {
  
   background(20,100,250);
+  cara=loadImage("Official_portrait_of_Barack_Obama-2.jpg");
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
