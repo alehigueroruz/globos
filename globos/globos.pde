@@ -18,11 +18,15 @@ class Globo
   void dibujate()
   {
       ellipse(x,y,100,100);
+      imageMode(CENTER);
+      image(cara,x,y,100,100);
   }
   
 }
 
 ArrayList<Globo> globos;
+
+PImage cara;
 
 
 void setup()
@@ -33,7 +37,9 @@ void setup()
 
 void draw()
 {
+ 
   background(20,100,250);
+    cara=loadImage("Official_portrait_of_Barack_Obama-2.jpg");
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
