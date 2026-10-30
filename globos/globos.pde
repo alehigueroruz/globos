@@ -24,7 +24,7 @@ class Globo
   void dibujate()
   {
       fill(c);
-      rect(x,y,100,100);
+      rect(x,y,10,10);
   }
   
 }
