@@ -12,7 +12,7 @@ class Globo
    y=_y; 
    vx=random(-0.5,0.5);
    vy=random(-5,-0.5);
-   c=color(random(0,255),random(0,255),random(0,255));
+   c=color(random(0,20),random(0,20),random(0,20));
   }
 
   void update()
