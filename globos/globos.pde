@@ -1,12 +1,18 @@
 class Globo
 {
-  float x, y,vx,vy;
+  //Atributos de la clase globo
+  //Posicion, velocidad, aceleracion
+  float x, y,vx,vy,ax,ay;
+  color c;
+  
+  //Constructor de clase
   Globo (float _x, float _y)
   {
    x=_x;
    y=_y; 
-   vx=random(-0.25,0.25);
-   vy=random(-2,-0.5);
+   vx=random(-0.5,0.5);
+   vy=random(-5,-0.5);
+   c=color(random(0,20),random(0,20),random(0,20));
   }
 
   void update()
@@ -17,13 +23,13 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,100,100);
+      fill(c);
+      rect(x,y,10,10);
   }
   
 }
 
 ArrayList<Globo> globos;
-
 
 void setup()
 {
@@ -33,6 +39,7 @@ void setup()
 
 void draw()
 {
+ 
   background(20,100,250);
   for(int i=0;i<globos.size();i++)
   {
